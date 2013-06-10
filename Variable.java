@@ -33,6 +33,7 @@ public class Variable {
 	 public static Tile blueTile = new Tile(1011, 4525,0);
 	 public static Tile TeleTile = new Tile(1002,4523,0);
 	 public static Tile aglifinTile = new Tile(2892,9799,0);
+	 public static Tile crossTile = new Tile(2891,3404,0);
 	 
 	 public static final Area DungArea = new Area(new Tile(1020, 4537, 0), new Tile(1020, 4505, 0), new Tile(1005, 4505, 0),
 			                                      new Tile(1003, 4537, 0));
