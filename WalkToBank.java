@@ -25,14 +25,9 @@ public class WalkToBank extends Node{
    	}
    	Variable.paintStatus="Walking to bank";
      Walking.newTilePath(Variable.PathToBank).traverse();
-    sleep(5700, 7500);
-     // Variable.ToBankTile.clickOnMap();
-	 //Variable.prebankTile.clickOnMap();
-	// sleep(3300, 5300);
-	 //Variable.bankTile.clickOnMap();
-    // sleep(4300, 6300);
+     sleep(8700, 9500);
      Variable.bankTile.clickOnMap();
-     sleep(6300, 8300);
+     sleep(7300, 8600);
     }
 	
 

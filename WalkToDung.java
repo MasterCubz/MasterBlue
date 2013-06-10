@@ -22,7 +22,6 @@ public class WalkToDung extends Node {
 	    	 Camera.setAngle(0);
 	    	 
 	    	 Walking.newTilePath(Variable.PathToStairs).traverse();
-	    	 Variable.Crossriver.clickOnMap();
 	    	 sleep(13900, 15300);
 	    	 
 	    	 Variable.paintStatus="Entering Cave";

@@ -11,6 +11,8 @@ import org.powerbot.game.api.wrappers.widget.WidgetChild;
 
 
 public class Methods {
+	
+	//Dizzy
 	public static int getPrice(int id) {
 		  int price = 0;
 		  String add = "http://scriptwith.us/api/?return=text&item=";
@@ -31,7 +33,8 @@ public class Methods {
 	 private static final WidgetChild CLOSE = Widgets.get(640, 30);
      private static final WidgetChild OPEN = Widgets.get(640, 3);
      private static final WidgetChild ENTERPRESS = Widgets.get(137, 56);
-	   
+	
+    //From resources, with some changes
 	public static void  abilities() {
    
   
