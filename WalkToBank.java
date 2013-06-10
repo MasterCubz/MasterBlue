@@ -1,4 +1,5 @@
 import org.powerbot.core.script.job.state.Node;
+import org.powerbot.game.api.methods.Walking;
 import org.powerbot.game.api.methods.interactive.Players;
 import org.powerbot.game.api.methods.tab.Inventory;
 
@@ -23,14 +24,15 @@ public class WalkToBank extends Node{
      sleep(9000, 12000);
    	}
    	Variable.paintStatus="Walking to bank";
-     Variable.ToBankTile.clickOnMap();
-	 sleep(4700, 7500);
-	 Variable.prebankTile.clickOnMap();
-	 sleep(3300, 5300);
-	 Variable.bankTile.clickOnMap();
-     sleep(4300, 6300);
+     Walking.newTilePath(Variable.PathToBank).traverse();
+    sleep(5700, 7500);
+     // Variable.ToBankTile.clickOnMap();
+	 //Variable.prebankTile.clickOnMap();
+	// sleep(3300, 5300);
+	 //Variable.bankTile.clickOnMap();
+    // sleep(4300, 6300);
      Variable.bankTile.clickOnMap();
-     sleep(3300, 5300);
+     sleep(6300, 8300);
     }
 	
 
