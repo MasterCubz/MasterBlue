@@ -1,5 +1,4 @@
 import org.powerbot.core.script.job.state.Node;
-import org.powerbot.game.api.methods.Calculations;
 import org.powerbot.game.api.methods.Walking;
 import org.powerbot.game.api.methods.interactive.Players;
 import org.powerbot.game.api.methods.node.SceneEntities;
@@ -11,7 +10,10 @@ import org.powerbot.game.api.wrappers.node.SceneObject;
 public class WalkToDung extends Node {
 		@Override
 		public boolean activate() {
-			return !Variable.DungArea.contains(Players.getLocal()) && Inventory.contains(Variable.Food) && Calculations.distanceTo(Variable.bankTile) <= 5;
+			return !Variable.DungArea.contains(Players.getLocal()) 
+					&& Inventory.contains(Variable.Food) 
+					&& !Variable.TravleyArea.contains(Players.getLocal());
+					
 		}
 		
 		
@@ -41,26 +43,27 @@ public class WalkToDung extends Node {
 			 sleep(1600, 2100);
 			 
 			 while(Variable.PreAgliArea.contains(Players.getLocal().getLocation())){
-			 Variable.paintStatus="Agility Shortcut";
-			 SceneObject agliop = SceneEntities.getNearest(53134);
-			 agliop.interact("Squeeze-through");
-			 sleep(9700, 11900);
+			    Variable.paintStatus="Agility Shortcut";
+			    SceneObject agliop = SceneEntities.getNearest(53134);
+			    agliop.interact("Squeeze-through");
+			    sleep(9700, 11900);
 			 }
 			 
 			 while(Variable.BlueArea.contains(Players.getLocal().getLocation())){ 
-			 Variable.paintStatus="In Blues";
-			 Walking.newTilePath(Variable.PathToResource).traverse();
-			 sleep(2700, 3500);	
-			 Variable.resourceTile.interact("Walk Here");
-			 sleep(1300, 1600);
-			 SceneObject dung = SceneEntities.getNearest(52852);
-			 dung.interact("");
-			 sleep(4900, 5500);
+			    Variable.paintStatus="In Blues";
+			    Walking.newTilePath(Variable.PathToResource).traverse();
+			    sleep(2700, 3500);	
+			    Variable.resourceTile.interact("Walk Here");
+			    sleep(1300, 1600);
+			    SceneObject dung = SceneEntities.getNearest(52852);
+			    dung.interact("Enter");
+			    sleep(4900, 5500);
 			 }
 			 
 	 		if(!Variable.DungArea.contains(Players.getLocal().getLocation())) {
-	 		Variable.blueTile.interact("Walk Here");
-	 		 sleep(700, 900); 
+	 	        Camera.turnTo(Variable.blueTile);
+	 		    Variable.blueTile.interact("Walk Here");
+	 		    sleep(700, 900); 
 	 		
 	 		}
 	     }

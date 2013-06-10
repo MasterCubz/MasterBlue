@@ -29,14 +29,16 @@ public class WalkToBank extends Node{
    		Methods.sleeps(!Variable.DungArea.contains(Players.getLocal().getLocation()));
    	    
    	 	Lodestone.teleportTo(Lodestone.TAVERLY, Lodestone.TAVERLY_ARRIVAL_AREA); 
-   	    Methods.sleeps(Lodestone.TAVERLY_ARRIVAL_AREA.contains(Players.getLocal().getLocation()));
+   	    Methods.sleeps(Variable.TravleyArea.contains(Players.getLocal().getLocation()));
    	}
+   	
     Variable.paintStatus="Walking to bank";
     Walking.newTilePath(Variable.PathToBank).traverse();
     Methods.sleeps(Variable.TravleyArea.contains(Players.getLocal().getLocation()));
      
-     Variable.bankTile.interact("Walk here");
-     sleep(7300, 8600);
+    Variable.bankTile.interact("Walk here");
+    sleep(7300, 8600);
+     
     }
 	
 

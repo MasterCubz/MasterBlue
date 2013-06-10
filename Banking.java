@@ -15,7 +15,7 @@ public class Banking extends Node {
     @Override
     public void execute() {
     	Variable.paintStatus = "Banking";
-    	//NPC bank = NPCs.getNearest(14924);
+    	  //NPC bank = NPCs.getNearest(14924);
         SceneObject bank = SceneEntities.getNearest(66666);
 		  //bank.interact("click");
 		  bank.click(true);
