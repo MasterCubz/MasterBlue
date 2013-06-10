@@ -1,11 +1,14 @@
 import org.powerbot.game.api.methods.tab.Skills;
 import org.powerbot.game.api.wrappers.Area;
 import org.powerbot.game.api.wrappers.Tile;
+import org.powerbot.game.api.wrappers.widget.Widget;
+import org.powerbot.game.api.wrappers.widget.WidgetChild;
 
 
 public class Variable {
 	
 	
+	 public final static WidgetChild INV_TAB = new Widget(548).getChild(141);
 	 
 	 public static final  int Food = 385;
 	 public static final  int Foodamount = 4;
