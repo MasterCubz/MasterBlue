@@ -23,7 +23,7 @@ public class WalkToDung extends Node {
 	    	 
 	    	 Walking.newTilePath(Variable.PathToStairs).traverse();
 	    	 sleep(3900, 5300);
-	    	 Variable.crossTile.clickOnMap();
+	    	 Variable.crossTile.interact("click");
 	    	 sleep(11900, 13300);
 	    	 
 	    	 Variable.paintStatus="Entering Cave";
@@ -31,18 +31,17 @@ public class WalkToDung extends Node {
 	         sleep(3300, 3300);
 	         SceneObject RopeDown = SceneEntities.getNearest(66991);
 					
-			 RopeDown.click(true);
+			 RopeDown.interact("click");
 			 sleep(1900, 2300);				        
 			
 			 Variable.paintStatus="In Cave";
-			 Variable.agliopTile.clickOnMap();
+			 Variable.agliopTile.interact("click");
 			 sleep(1600, 2100);
 			 
 			 while(Variable.PreAgliArea.contains(Players.getLocal().getLocation())){
 			 Variable.paintStatus="Agility Shortcut";
 			 SceneObject agliop = SceneEntities.getNearest(53134);
-			 agliop.click(true);
-			 agliop.click(true);
+			 agliop.interact("click");
 			 sleep(9700, 11900);
 			 }
 			 
@@ -50,15 +49,15 @@ public class WalkToDung extends Node {
 			 Variable.paintStatus="In Blues";
 			 Walking.newTilePath(Variable.PathToResource).traverse();
 			 sleep(2700, 3500);	
-			 Variable.resourceTile.clickOnMap();
+			 Variable.resourceTile.interact("click");
 			 sleep(1300, 1600);
 			 SceneObject dung = SceneEntities.getNearest(52852);
-			 dung.click(true);
+			 dung.interact("click");
 			 sleep(4900, 5500);
 			 }
 			 
 	 		if(!Variable.DungArea.contains(Players.getLocal().getLocation())) {
-	 		Variable.blueTile.clickOnMap();
+	 		Variable.blueTile.interact("click");
 	 		 sleep(700, 900); 
 	 		
 	 		}

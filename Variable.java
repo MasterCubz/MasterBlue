@@ -45,6 +45,9 @@ public class Variable {
 	 public static final Area BlueArea = new Area(new Tile(2892, 9794, 0), new Tile(2923, 9794, 0),new Tile(2923, 9813, 0), 
 			 new Tile(2892, 9813, 0));
 	 
+	 public static final Area TravleyArea = new Area(new Tile(2879,3446,0), new Tile (2887,3446,0),new Tile (2887,3422,0), 
+			                                         new Tile(2879,3422,0));
+	 
 	 public static final Tile[] PathToResource = new Tile[] { new Tile(2893, 9799, 0), new Tile(2896, 9799, 0), new Tile(2907, 9805, 0) };
 	 public static final Tile[] PathInDung = new Tile[] {new Tile(1010,4512,0), new Tile(1012,4522,0), new Tile(1011,4529,0)};
 	 public static final Tile[] PathToStairs = new Tile[] {new Tile(2875,3417,0), new Tile(2887,3415,0), new Tile(2898,3414,0), 

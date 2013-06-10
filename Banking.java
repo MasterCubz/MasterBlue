@@ -1,10 +1,8 @@
 import org.powerbot.core.script.job.state.Node;
 import org.powerbot.game.api.methods.Calculations;
-import org.powerbot.game.api.methods.interactive.NPCs;
 import org.powerbot.game.api.methods.node.SceneEntities;
 import org.powerbot.game.api.methods.tab.Inventory;
 import org.powerbot.game.api.methods.widget.Bank;
-import org.powerbot.game.api.wrappers.interactive.NPC;
 import org.powerbot.game.api.wrappers.node.SceneObject;
 
 public class Banking extends Node {

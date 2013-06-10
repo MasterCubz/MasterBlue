@@ -20,7 +20,10 @@ public class Combat extends Node {
     	if (Players.getLocal().getHealthPercent()<60){
     		Variable.paintStatus="Eating food";
 			WidgetChild e = Inventory.getItem(Variable.Food).getWidgetChild();
-			e.interact("click");
+			if (!e.validate()){
+				Mouse.click(Variable.INV_TAB.getCentralPoint(), true);
+			}
+			e.interact("Eat");
 			sleep(100,200);
 		}
     	

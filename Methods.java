@@ -7,6 +7,7 @@ import org.powerbot.core.script.job.Task;
 import org.powerbot.game.api.methods.Widgets;
 import org.powerbot.game.api.methods.input.Keyboard;
 import org.powerbot.game.api.methods.interactive.Players;
+import org.powerbot.game.api.util.Timer;
 import org.powerbot.game.api.wrappers.widget.WidgetChild;
 
 
@@ -35,6 +36,17 @@ public class Methods {
      private static final WidgetChild ENTERPRESS = Widgets.get(137, 56);
 	
     //From resources, with some changes
+     
+    public static void  sleeps(boolean CONDITION){
+     	
+    	Timer t = new Timer(6000);
+       	while(t.isRunning() && CONDITION) {
+       	Task.sleep(10);
+       	}
+    	
+    	
+    	
+    }
 	public static void  abilities() {
    
   
