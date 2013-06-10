@@ -21,15 +21,19 @@ public class WalkToBank extends Node{
    	if(!Lodestone.TAVERLY_ARRIVAL_AREA.contains(Players.getLocal().getLocation())
    		&& !Variable.TravleyArea.contains(Players.getLocal().getLocation()) ){
    		Camera.turnTo(Variable.TeleTile);
+   		//if (!Variable.TeleTile.isOnScreen()){
+   			//Walking.PathToDungEntre(Variable.PathToBank).traverse();
+   		//}
+   		
    		Variable.TeleTile.interact("Walk here");
-   		Methods.sleeps(Variable.DungArea.contains(Players.getLocal().getLocation()));
+   		Methods.sleeps(!Variable.DungArea.contains(Players.getLocal().getLocation()));
    	    
    	 	Lodestone.teleportTo(Lodestone.TAVERLY, Lodestone.TAVERLY_ARRIVAL_AREA); 
-   	    Methods.sleeps(!Lodestone.TAVERLY_ARRIVAL_AREA.contains(Players.getLocal().getLocation()));
+   	    Methods.sleeps(Lodestone.TAVERLY_ARRIVAL_AREA.contains(Players.getLocal().getLocation()));
    	}
     Variable.paintStatus="Walking to bank";
     Walking.newTilePath(Variable.PathToBank).traverse();
-    sleep(9700, 11500);
+    Methods.sleeps(Variable.TravleyArea.contains(Players.getLocal().getLocation()));
      
      Variable.bankTile.interact("Walk here");
      sleep(7300, 8600);

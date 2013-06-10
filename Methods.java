@@ -40,8 +40,11 @@ public class Methods {
     public static void  sleeps(boolean CONDITION){
      	
     	Timer t = new Timer(6000);
-       	while(t.isRunning() && CONDITION) {
-       	Task.sleep(10);
+       	while(t.isRunning()) {
+       	   Task.sleep(10);
+       	   if (CONDITION){
+       		   break;
+       	   }
        	}
     	
     	
